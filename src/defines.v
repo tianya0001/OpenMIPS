@@ -1,23 +1,5 @@
-`timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 2023/09/01 17:52:32
-// Design Name: 
-// Module Name: defines
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
+
+
 
 //**********************  全局宏定义  **********************
 `define RstEnable		1'b1			// 复位信号有效
@@ -40,6 +22,34 @@
 //**********************  与具体指令相关的宏定义  **********************
 `define EXE_ORI			6'b001101		// 指令ori的指令码
 `define EXE_NOP			6'b000000
+
+// ALU OP
+`define EXE_OR_OP       8'b00100101
+`define EXE_NOP_OP      8'b00000000
+
+// ALU SEL
+`define EXE_RES_LOGIC   3'b001
+`define EXE_RES_NOP     3'b000
+
+//**********************  与指令存储器ROM相关的宏定义  **********************
+`define InstAddrBus     31:0            // ROM地址总线宽度
+`define InstBus         31:0            // ROM数据总线宽度
+`define InstMemNum      131071          // ROM实际大小为128KB
+`define InstMemNumLog2  17              // ROM实际使用的地址线宽度
+
+//**********************  与通用寄存器Regfile有关的宏定义  **********************
+`define RegAddrBus      4:0             // Regfile模块的地址线宽度
+`define RegBus          31:0            // Regfile模块的数据线款第
+`define RegWidth        32              // 通用寄存器的宽度
+`define DoubleRegWidth  64              // 两倍通用寄存器宽度
+`define DoubleRegBus    63:0            // 两倍通用寄存器的数据线宽度
+`define RegNum          32              // 通用寄存器的数量
+`define RegNumLog2      5               // 寻址通用寄存器使用的地址位数
+`define NOPRegAddr      5'b00000        
+
+
+
+
 
 
 
