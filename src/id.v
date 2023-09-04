@@ -23,7 +23,7 @@ module id(
     output reg[`RegBus]         reg1_o,
     output reg[`RegBus]         reg2_o,
     output reg[`RegAddrBus]     wd_o,
-    output reg                  wreg_o,
+    output reg                  wreg_o
 );
     
     // 取得指令的指令码、功能码
@@ -88,7 +88,7 @@ module id(
                     wd_o <= inst_i[20:16];
 
                     // ori指令是有效指令
-                    instvalid <= `InstValid
+                    instvalid <= `InstValid;
                 end
                 default: begin
                     

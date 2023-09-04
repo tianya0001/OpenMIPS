@@ -21,7 +21,7 @@ module if_id(
     input wire[`InstBus]        if_inst,
 
     // 对应译码阶段的信号
-    output reg[`InstAddrBus]    if_pc,
+    output reg[`InstAddrBus]    id_pc,
     output reg[`InstBus]        id_inst
 );
 
