@@ -10,10 +10,10 @@
 //  |----------------------------------------------------------
 
 module pc_reg(
-    input wire clk,
-    input wire rst,
+    input wire                  clk,
+    input wire                  rst,
     output reg[`InstAddrBus]    pc,
-    output reg ce
+    output reg                  ce
 );
     
     always @ (posedge clk) begin

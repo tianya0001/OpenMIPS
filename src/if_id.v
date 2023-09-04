@@ -13,12 +13,12 @@
 //  |----------------------------------------------------------
 
 module if_id(
-    input wire clk,
-    input wire rst,
+    input wire                  clk,
+    input wire                  rst,
 
     // 来自取指阶段的信号，其中宏定义InstBus表示指令宽度，为32
-    input wire[`InstAddrBus] if_pc,
-    input wire[`InstBus] if_inst,
+    input wire[`InstAddrBus]    if_pc,
+    input wire[`InstBus]        if_inst,
 
     // 对应译码阶段的信号
     output reg[`InstAddrBus]    if_pc,
